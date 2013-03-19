@@ -17,6 +17,7 @@
 		"supertest": ">0",
 		"pow-mongodb-fixtures": ">0",
 		"should": ">0",
-		"socket.io": ">0"
+		"socket.io": ">0",
+		"dbox": ">0"
 	}
 }	
