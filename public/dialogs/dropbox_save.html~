@@ -1,0 +1,25 @@
+<div>
+  <div class="modal-header">
+    <h3>Dropbox</h3>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+        <tr><th>Nome da pasta</th></tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="folder in folders">
+          <td>
+            <a href="#" ng-click="open(folder.path)">
+              <img src="/public/folder.png" style="margin-right:10px"/>{{ folder.name }}
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <a ng-click="close()" class="btn">Fechar</a>
+    <a ng-click="accept()" class="btn btn-primary">Salvar aqui</a>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="modal">
+  <div class="modal-header">
+    <h3>Compartilhar</h3>
+  </div>
+  <div class="modal-body">
+      <form class="form-horizontal">
+        <div class="control-group">
+        <label class="control-label">Compartilhar com:</label>
+        <div class="controls">
+          <div class="input-append">
+            <input type="text" ng-model="email" placeholder="Endereço e-mail" class="input-large">
+            <button class="btn" type="button" ng-click="add()"><i class="icon-plus"></i></button>
+          </div>
+        </div>
+        </div>
+      </form>
+
+      <div ng-switch on="hasShares">
+        <table ng-switch-when="true" class="table table-striped" ng-switch on="shares">
+          <tbody>
+            <tr ng-repeat="share in shares">
+              <td>
+                {{ share }}
+                <div class="pull-right">
+                  <button ng-click="remove(share)" class="btn"><i class="icon-remove"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div ng-switch-when="false" class="muted" style="text-align:center;margin-top:20px">
+          <h4>Esse documento não está compartilhado com ninguém</h4>
+        </div>
+      </ng-switch>
+  </div>
+  <div class="modal-footer">
+    <a ng-click="accept()" class="btn btn-primary">Fechar</a>
+  </div>
+</div>
+

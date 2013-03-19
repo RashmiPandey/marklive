@@ -1,0 +1,14 @@
+<div>
+  <div class="modal-header">
+    <h3>Criar Documento</h3>
+  </div>
+  <div class="modal-body">
+    <form>
+      <label>Nome do documento</label>
+      <input ui-select2="{ tokenSeparators: [','] }" ng-model='name' class="input-xlarge" type="text">
+  </div>
+  <div class="modal-footer">
+    <a ng-click="close()" class="btn">Cancelar</a>
+    <a ng-click="accept()" class="btn btn-primary">Criar</a>
+  </div>
+</div>
