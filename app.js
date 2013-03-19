@@ -118,6 +118,4 @@ app.get('/session.js', function(req, res) {
     res.send('var userSession = ' + JSON.stringify(req.session.user) + ';');
 });
 
-server.listen(8080);
-
-//app.listen((process.env.NODE_ENV == 'test' ? 8081 : null) || process.env.PORT || 8080);
+server.listen((process.env.NODE_ENV == 'test' ? 8081 : null) || process.env.PORT || 8080);
