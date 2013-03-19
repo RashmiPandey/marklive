@@ -12,7 +12,7 @@ module.exports = function(app) {
 		} else {
 			dropbox.requesttoken(function(status, request_token) {
 				req.session.request_token = request_token;
-				res.redirect(request_token.authorize_url + '&oauth_callback=http://localhost:8080/auth');
+				res.redirect(request_token.authorize_url + '&oauth_callback=http://' + req.headers.host + '/auth');
 			});
 		}
 	});
