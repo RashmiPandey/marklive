@@ -9,7 +9,7 @@ global.db = require('./lib/db.js').initialize({
         database: (process.env.NODE_ENV == 'test' ? 'marklive-test' : 'marklive'),
         host: (process.env.NODE_ENV == 'test' ? 'localhost' : false) || (process.env.PORT ? "ds037447.mongolab.com" : "localhost"),
         port: process.env.PORT ? 37447 : 27017,
-        user: process.env.PORT ? "gustavosbarreto" : null,
+        user: process.env.PORT ? "marklive" : null,
         password: process.env.PORT ? "senha": null });
 
 global.dropbox = require('dbox').app({ app_key: '0965f2jvw1s1ww8', app_secret: 'lzmpbuem1hsuv4g', root: 'dropbox'});
